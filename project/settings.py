@@ -45,8 +45,43 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'welcome',
     'bootstrap4',
-    
+    'ckeditor',
+    'ckeditor_uploader',
+    'rest_framework',
+    'taggit',
+    'django_filters',
+	'bootstrapform',    
 ]
+
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS ={
+		'default': {
+		'toolbar': 'Custom',
+		'height': 500,
+		'toolbar_Custom': [
+			['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'SpellChecker', 'Undo', 'Redo'],
+			['Link','Unlink','Anchor'],
+			['Image','Flash','Table', 'HorizontalRule'],
+			['TextColor', 'BGColor'],
+			['Smiley','SpecialChar'],['Source'],
+		],
+	},
+	'special': {
+		'toolbar': 'Special',
+		'toolbar_Special': [
+			['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'SpellChecker', 'Undo', 'Redo'],
+			['Link','Unlink','Anchor'],
+			['Image','Flash','Table', 'HorizontalRule'],
+			['TextColor', 'BGColor'],
+			['Smiley','SpecialChar'],['Source'],
+			['CodeSnippet','Youtube'],
+		],
+			'extraPlugins': ','.join(['codesnippet','youtube']),
+	}
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
