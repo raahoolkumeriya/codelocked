@@ -1,13 +1,97 @@
-{% load staticfiles %}
+
+
 <html>
 	
 	<head>
 	 <meta name="msvalidate.01" content="3FA8B6D4589A420CCAE77CA3D5BAA948" />
-	 <meta name="google-site-verification" content="fPQXZ4ONu6ZarO377jFsOfxQtLb5OCpi03DLUD-S5i4" />
+	 <meta name="google-site-verification" content="sXJlMSTXdk6jtqybrlN1RqGQjVY7RULciRi7Ifo1_Zk" />
 	<title>
-	{% block title %} Welcome {% endblock %}
+	 Welcome 
 	</title>
-		{% include 'snippets/index_css.html' %}
+		
+		
+		
+
+		
+		<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" rel="stylesheet">
+		<script crossorigin="anonymous" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+		
+		
+
+
+		
+	<style type="text/css">
+		
+		
+		#f1_container {
+		  position: relative;
+		  margin: 10px auto;
+		  width: 140px;
+		  height: 160px;
+		  z-index: 1;
+		}
+		#f1_container {
+		  perspective: 1000;
+		}
+		#f1_card {
+		  width: 100%;
+		  height: 100%;
+		  margin: 0 auto;
+		  transform-style: preserve-3d;
+		  transition: all 1.0s  linear;
+		  -webkit-animation: anim 5s infinite linear;
+	    	animation: anim 5s infinite linear;
+		}
+		
+			@-webkit-keyframes anim {
+				from {-webkit-transform: rotateY(0deg);}
+				to {-webkit-transform: rotateY(360deg);}
+			}
+
+			@keyframes anim {
+				from {transform: rotateY(0deg);}
+				to {transform: rotateY(360deg);}
+			}
+		
+		
+		#f1_container:hover #f1_card {
+		  transform: rotateY(180deg);
+		  box-shadow: -5px 5px 5px #aaa;
+		  
+		}
+
+		
+		.face {
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  backface-visibility: hidden;
+		}
+		.face.back {
+		  display: block;
+		  transform: rotateY(180deg);
+		  box-sizing: border-box;
+		  padding: 10px;
+		  color: white;
+		  text-align: center;
+		  background-color: black;
+		}
+		
+		body {
+			background: url(/static/images/Screenshot5.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			opacity: 0.4;
+			font-family:Meiryo UI"
+		
+		}
+
+		
+	</style>
+
 	
 			
 		<!-- Google Analytics -->
