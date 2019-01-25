@@ -1,0 +1,29 @@
+
+<div class="container">
+<nav class="my-nav nav-overlay navbar navbar-expand-xl navbar-fixed-top navbar-light">
+  <a class="navbar-brand" href="/">
+   <p class="d-inline-block align-top active"><strong>CODE</strong>LOCKED</p>
+  </a>
+  <button class="my-navbrand navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto text-lg">
+		
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/home">HOME <span class="sr-only">(current)</span></a>
+      </li>
+		{% for nitem in nav_items %}
+		<li class="nav-item active">
+		<a class="nav-link" href="/home/{{ nitem }}">{{ nitem|upper }}</a>
+		</li>
+		{% endfor %}
+	   <li class="nav-item active">
+        <a class="nav-link" href="/contact">CONTACT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>	  
+	  

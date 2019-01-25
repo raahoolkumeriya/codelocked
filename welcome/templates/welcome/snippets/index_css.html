@@ -1,0 +1,79 @@
+{% load staticfiles %}
+		{# Load the tag library #}
+		{% load bootstrap4 %}
+
+		{# Load CSS and JavaScript #}
+		{% bootstrap_css %}
+		{% bootstrap_javascript jquery='full' %}
+
+		{# Display django.contrib.messages as Bootstrap alerts #}
+		{% bootstrap_messages %}
+		
+	<style type="text/css">
+		
+		
+		#f1_container {
+		  position: relative;
+		  margin: 10px auto;
+		  width: 140px;
+		  height: 160px;
+		  z-index: 1;
+		}
+		#f1_container {
+		  perspective: 1000;
+		}
+		#f1_card {
+		  width: 100%;
+		  height: 100%;
+		  margin: 0 auto;
+		  transform-style: preserve-3d;
+		  transition: all 1.0s  linear;
+		  -webkit-animation: anim 5s infinite linear;
+	    	animation: anim 5s infinite linear;
+		}
+		
+			@-webkit-keyframes anim {
+				from {-webkit-transform: rotateY(0deg);}
+				to {-webkit-transform: rotateY(360deg);}
+			}
+
+			@keyframes anim {
+				from {transform: rotateY(0deg);}
+				to {transform: rotateY(360deg);}
+			}
+		
+		
+		#f1_container:hover #f1_card {
+		  transform: rotateY(180deg);
+		  box-shadow: -5px 5px 5px #aaa;
+		  
+		}
+
+		
+		.face {
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  backface-visibility: hidden;
+		}
+		.face.back {
+		  display: block;
+		  transform: rotateY(180deg);
+		  box-sizing: border-box;
+		  padding: 10px;
+		  color: white;
+		  text-align: center;
+		  background-color: black;
+		}
+		
+		body {
+			background: url({% static 'images/Screenshot5.png'%});
+			background-repeat: no-repeat;
+			background-size: cover;
+			opacity: 0.4;
+			font-family:Meiryo UI"
+		
+		}
+
+		
+	</style>
