@@ -4,4 +4,4 @@ from .models import StreamType
 class StreamSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model 	= StreamType
-		fields	= ('id','url','title','category')
+		fields	= ('id','url','title','summary','description','category')
