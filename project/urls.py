@@ -9,7 +9,7 @@ from django.conf.urls import url
 from django.conf import settings
 
 
-#from welcome.views import index, health
+from welcome.views import health
 
 
 #rest framework

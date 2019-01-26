@@ -18,10 +18,10 @@ def index(request):
         'database': database.info(),
         'count': PageView.objects.count()
     })
-
+'''
 def health(request):
     return HttpResponse(PageView.objects.count())
-'''
+
 
 
 from django.shortcuts import render
