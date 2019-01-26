@@ -35,7 +35,7 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),  #rest_framework
     url(r'^home/(?P<slugcatergory>.*)/$', LandingView),	
     url(r'^$', TemplateView.as_view(template_name = 'index.html')),
-    #url(r'^health$', health),
+    url(r'^health$', health),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^contact', TemplateView.as_view(template_name = 'contact.html')),
 ]
