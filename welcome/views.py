@@ -47,13 +47,10 @@ def LandingView(request, slugcatergory):
 	queryset=StreamType.objects.all()
 	
 	#-------------------- random projects ---------------------- #
-	random_project=[]
+	random_project=queryset[:15]
 	#count_ = StreamType.objects.all().count()
 	#for i in range(1,20):
 	#	random_project.append(StreamType.objects.get(pk=random.randint(1,count_)))
-	shuffle_input = queryset
-	random.shuffle(shuffle_input)
-	random_project=shuffle_input[:10]
 	
 	#---------------------- paginator ---------------------------#
 	paginator = Paginator(queryset,5)  # show 5 projects per page
