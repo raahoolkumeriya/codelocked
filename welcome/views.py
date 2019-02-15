@@ -49,8 +49,8 @@ def LandingView(request, slugcatergory):
 	#-------------------- random projects ---------------------- #
 	random_project=[]
 	count_ = StreamType.objects.all().count()
-	for i in range(1,30):
-		random_project.append(StreamType.objects.get(pk=random.randint(1,count_)))
+	#for i in range(1,20):
+	#	random_project.append(StreamType.objects.get(pk=random.randint(1,count_)))
 
 	
 	#---------------------- paginator ---------------------------#
