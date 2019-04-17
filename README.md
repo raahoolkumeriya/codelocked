@@ -1,4 +1,4 @@
-# Openshift quickstart: Django
+# Openshift quickstart: Django [![Build Status](https://travis-ci.com/raahoolkumeriya/codelocked.svg?token=pSSR4mzpCjQHM3cwp9KD&branch=master)](https://travis-ci.com/raahoolkumeriya/codelocked)
 
 This is a [Django](http://www.djangoproject.com) project that you can use as the starting point to develop your own and deploy it on an [OpenShift](https://github.com/openshift/origin) cluster.
 
