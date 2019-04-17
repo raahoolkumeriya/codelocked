@@ -6,7 +6,7 @@ python:
 services: postgresql
 
 env:
-  - DJANGO == 1.8.15
+  - DJANGO=1.8.15
 
 before_install:
   - export DJANGO_SETTINGS_MODULE=project.settings
