@@ -22,4 +22,4 @@ before_script:
   - psql -c "CREATE DATABASE mydb;" -U postgres
 
 script:
-  - py.test
+  - python -m pytest welcome/tests
