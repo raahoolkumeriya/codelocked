@@ -3,10 +3,14 @@ from welcome.models import StreamType
 from django.utils import timezone
 
 class TestStreamType(TestCase):
-    def create_instance(self, title="only a test", summary="yes, this is only a test"):
-        return StreamType.objects.create(title=title, summary=summary, created=timezone.now())
-
-    def test_instance_creation(self):
-        w = self.create_instance()
-        self.assertTrue(isinstance(w, StreamType))
-        self.assertEqual(w.__str__(), w.title)
+    def test_stream_creation(self):
+        stream = StreamType.objects.create(
+            title = "Test object",
+            summary = "The long summary of test object",
+            category = "other",
+            description = "Full description of test",
+            github = "test@github.git",
+            created = timezone.now(),
+            tags = 'PY'
+        )
+        self.assertLess(stream.created, timezone.now())
