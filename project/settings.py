@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'taggit',
     'django_filters',
-	'bootstrapform',    
+	'bootstrapform',
+    'rest_framework_swagger',
 ]
 
 

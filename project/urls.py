@@ -8,8 +8,13 @@ from welcome.views import LandingView,StreamView
 from django.conf.urls import url
 from django.conf import settings
 
-
 from welcome.views import health
+
+#Swagger UI 
+
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title=' CODE LOCKED API')
 
 
 #rest framework
@@ -30,6 +35,7 @@ urlpatterns = [
     # Examples:
     # url(r'^$', 'project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
+    url(r'^docs/$', schema_view),   # swagger documentations
     url(r'^admin/', admin.site.urls),
     url(r'api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),  #rest_framework
