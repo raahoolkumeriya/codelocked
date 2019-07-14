@@ -11,4 +11,5 @@ django-taggit
 django-bootstrap-form
 django-filter
 pytest-cov
+django-rest-swagger
 
