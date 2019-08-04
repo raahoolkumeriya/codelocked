@@ -32,6 +32,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+#Swagger autoschema enable
+REST_FRAMEWORK = {
+  ...
+  'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+}
+
 
 # Application definition
 
